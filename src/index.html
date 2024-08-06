@@ -11,6 +11,10 @@
             color: black;
             background-color: #f8f9fa;
         }
+        #main{
+            font-size: 25px;
+            font-weight: 600;
+        }
         input, button {
             display: block; 
             margin-top: 10px; 
@@ -21,29 +25,78 @@
         }
         .form-container {
             margin: auto;
-            padding: 20px;
+            padding: 25px;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         }
+        .btn{
+            background-color: rgb(49, 49, 211);
+            color: white;
+            border-radius: 14px;
+            font-weight: 650;
+        }
+        .btn:hover{
+            background-color: black;
+            color: white;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .navbar-light .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .navbar-brand {
+            flex-grow: 1;
+        }
+        @media (min-width: 992px) {
+        #navbarNav{
+            position: absolute;
+            right: 40px;
+        }
+    }
     </style>
 </head>
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+
+
+    <nav class="navbar navbar-expand-lg bg-black">
         <div class="container-fluid">
-            <a class="navbar-brand font-bold" href="#">SIP Calculator</a>
+            <a class="navbar-brand text-white" id="main" href="#">SIP CALCULATOR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="blogs.html">Blogs</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <br><br><br><br><br><br><br>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" id="main" href="#">SIP CALCULATOR</a>
+        </div>
+    </nav> -->
+
+
+    <!-- CONTAINER -->
     <div class="container my-5">
         <div class="text-center mb-5">
-            <h1 class="font-bold text-5xl my-4 text-green-500">SIP Calculator</h1>
-            <p>Calculate returns on your Systematic Investment Plan.</p>
+            <h1 class="font-bolder">SIP Calculator</h1>
+            <p class="text-black">Calculate returns on your Systematic Investment Plan.</p>
         </div>
 
-        <div class="form-container col-lg-6 col-md-8 col-sm-10">
+        <div class="form-container col-lg-5 col-md-8 col-sm-10">
             <label for="monthlyInvestment" class="form-label">Monthly Investment Amount</label>
             <input type="number" class="form-control" id="monthlyInvestment" placeholder="Rs. 1000">
             
@@ -55,30 +108,84 @@
             <small class="form-text">Note: Time ranging from 1 year to 40 years</small>
             <input type="number" class="form-control" id="tenure" placeholder="10 years">
             
-            <button class="btn btn-success mt-4" onclick="calculateSIP()">Calculate</button>
+            <button class="btn mt-4" onclick="calculateSIP()">Calculate</button>
 
             <h4 class="mt-4" id="result"></h4>
         </div>
         
-        <div class="my-5 p-4 bg-white border rounded">
-            <h3 class="text-center font-bold"><b>SIP Calculator – Systematic Investment Plan Calculator</b></h3>
-            <p>A SIP (Systematic Investment Plan) calculator is a financial tool used to estimate the future value of investments made through SIPs in mutual funds. SIPs allow investors to invest a fixed amount of money regularly (monthly, quarterly, etc.) into mutual funds, enabling disciplined investment and the benefit of compounding returns over time.
-                The SIP calculator typically requires the following inputs: <br>
-                <li>Monthly Investment Amount: The fixed amount invested regularly.</li>
-                <li>Expected Rate of Return: The annual rate of return expected from the investment.</li>
-                <li>Investment Period: The total duration (in years) for which the investment is made.</li>
-            </p>
-            <h3 class="font-bold mt-3"><b>Benefits of SIP</b></h3>
-            <ul>
+
+        <!-- MATTER -->
+        <div class="my-5 bg-white border rounded p-4">
+            <h4 class="font-bold"><b style="color: rgb(42, 42, 42); padding: 25px;">SIP Calculator – Systematic Investment Plan Calculator</b></h3>
+            <p class="justify-normal" style="padding: 25px; text-align: justify;">Prospective investors can think that SIPs and mutual funds are the same. However, SIPs are merely a method of investing in mutual funds, the other method being a lump sum. A SIP calculator is a tool that helps you determine the returns you can avail when parking your funds in such investment tools. Systematic Investment Plan or SIP is a process of investing a fixed sum of money in mutual funds at regular intervals. SIPs usually allow you to invest weekly, quarterly, or monthly.</p>  
+            <h4 class="font-bold"><b style="color: rgb(42, 42, 42); padding: 25px;">What is SIP?</b></h4>
+            <p class="justify-normal" style="padding: 25px; text-align: justify;">An SIP Calculator is an online tool that allows you to estimate the returns on your Mutual Fund investments, usually before you invest in them through one or more Systematic Investment Plans. It is simply a roadmap to help an investor seamlessly integrate SIP investments in his/her portfolio. However, the actual returns offered by a Mutual Fund scheme varies depending on various factors. <br>The manual computation can be slightly labor-intensive since SIPs typically involve a monthly payment. Since the holding period for each monthly contribution would be different at any given point in time, the returns for each of these payments will differ as well.</p>  
+            <h4 class="font-bold"><b style="color: rgb(42, 42, 42); padding: 25px;">Benefits of SIP?</b></h4>
+            <ul style="padding: 25px; text-align: justify;">
                 <li><b>Disciplined Investing:</b> Encourages a disciplined approach to investing by committing a fixed amount regularly.</li>
                 <li><b>Affordable:</b> Investors can start with a small amount, making it accessible to everyone.</li>
                 <li><b>Lower Risk:</b> Helps mitigate market volatility risk due to regular investments over time.</li>
                 <li><b>Goal-Oriented:</b> SIPs can be aligned with specific financial goals such as retirement, education, or purchasing a home.</li>
                 <li><b>No Need to Time the Market:</b> Regular investments mean you don't have to worry about market timing.</li><br>
-                <b> Created by- Akshat</b><br>
             </ul>
+
+
+            <!-- FAQ's -->
+            <h4 class="font-bold"><b style="color: rgb(42, 42, 42); padding: 25px;">SIP Calculator FAQ's</b></h4>
+            <div class="accordion" id="accordionExample" style="padding: 25px;">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Are sips investments exempt from taxes?</button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>No, taxes apply to the majority of SIP investment returns. Section 80C of the Income Tax Act, however, allows for a tax deduction for SIP investments made in tax-saving mutual fund schemes, such as ELSS Mutual Funds.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Working of an SIP Calculator</button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p><b>Step 1:</b> Choose your target or investment amount <br><b>Step 2:</b> Enter your investment or SIP amount <br><b>Step 3:</b> Select the SIP duration <br><b>Step 4:</b> Enter the expected rate of return. <br>After entering all the values, click ‘Calculate’. The calculator will instantly display the estimated maturity value or the required investment amount to achieve your goal.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Maximum tenure period of a SIP?</button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">Generally, a SIP might have a maximum duration of five to ten years. However, longer tenures may be available for certain Mutual Fund (MF) schemes, depending on their investing objectives and rules. Greater durations provide investors with the chance to grow their wealth over time by allowing for the possibility of compounding returns.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Can I renew SIP?</button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">It is possible to automatically renew a SIP. You can also choose to disable the auto-renew service offered by companies.</div>
+                  </div>
+                </div>
+              </div>
         </div>
+
+        
+        <div class="bg-white border rounded container my-5">
+            <h6 class=""><b style="color: rgb(42, 42, 42); padding: 25px; margin: 20px 0px;">Disclaimer</b></h6>
+            <p class="justify-normal" style="padding: 25px; text-align: justify;">Mutual fund investments are subject to market risks, please read all scheme related documents carefully. We are not responsible for any loss or shortfall resulting from the operations of the Mutual Fund scheme. <br><br><b>*T&C apply.</b></p> 
+        </div>
+
     </div>
+        <footer class="bg-black text-white text-center py-3 mt-auto">
+            <div class="container">
+                <p class="mb-0">&copy; 2024 SIP Calculator. All rights reserved.</p>
+            </div>
+        </footer>
+    
 
     <script>
         function calculateSIP() {
@@ -88,7 +195,7 @@
 
     // Basic validation
     if (isNaN(investment) || isNaN(annualRate) || isNaN(tenure)) {
-        alert("Please enter valid values");
+        alert("Please enter valid values in the given fields");
         return;
     }
 
@@ -96,19 +203,19 @@
     if (annualRate >= 31 ) {
         annualRate = 30; // Set to a maximum allowable value
         document.getElementById('annualRate').value = annualRate.toFixed(0); // Update input field
-        alert("Entered value is greater than 30")
+        alert("Entered value is greater than 30 ")
     }
 
     if (annualRate <= 9 ) {
         annualRate = 10; // Set to a maximum allowable value
         document.getElementById('annualRate').value = annualRate.toFixed(0); // Update input field
-        alert("Entered value is less than 10")
+        alert("Entered value is less than 10% in Annual Interest Rate")
     }
 
     if (tenure >= 41) {
         tenure = 40; // Set to a maximum allowable value
         document.getElementById('tenure').value = tenure.toFixed(0); // Update input field
-        alert("Entered value is greater than 41 years")
+        alert("Entered value is greater than 41 years in Investment Period")
     }
 
     var monthlyRate = annualRate / 12 / 100;
@@ -122,6 +229,9 @@
     document.getElementById('result').innerText = `Total Amount Invested: ₹ ${totalInvested.toFixed(0)}\n Estimate Return: ₹ ${(futureValue-totalInvested).toFixed(0)}\nFuture Value: ₹ ${futureValue.toFixed(0)}`;
 }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 </body>
 </html>
