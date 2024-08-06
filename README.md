@@ -1,4 +1,4 @@
 # SIP-Calculator
 
-![Screenshot 2024-07-05 235700](https://github.com/akshatraj27/SIP-Calculator/assets/88174048/420b2889-a478-4d26-a418-ff888d317b5d)
+![sip calculator](https://github.com/user-attachments/assets/5e417310-889d-4efa-b4eb-b5ad1850d7d3)
 
